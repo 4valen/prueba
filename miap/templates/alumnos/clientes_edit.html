@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualizar  </title>
+</head>
+<body>
+
+    {% if Cliente %}
+    <div style="text_align: center">
+        <h2>Actualizar Cliente</h2><br>
+        <form action="{% url 'clientesUpdate' %}" method="POST">
+            {% csrf_token %}
+
+            <pre>Nombre:             <input type="text" name="nombre" value="{{cliente.nombre}}"></pre>
+            <pre>Apellido P.:        <input type="text" name="paterno" value="{{cliente.apellido_paterno}}"></pre>
+            <pre>Apellido M.:        <input type="text" name="materno" value="{{cliente.apellido_materno}}"></pre>
+            <pre>Telefono:           <input type="number" name="telefono" value="{{cliente.telefono}}"></pre>
+            <pre>Correo:             <input type="text" name="correo" value="{{cliente.correo}}"></pre>
+            <pre>Region:             <input type="text" name="region" value="{{cliente.region}}"></pre>
+            <pre>Direccion:          <input type="text" name="direccion" value="{{cliente.direccion}}"></pre>
+            <pre>Comuna:             <input type="text" name="comuna" value="{{cliente.comuna}}"></pre>
+            <input type="submit" name="opcion" value="Actualizar">
+        </form> <br><br>
+        <a href="{% url 'index' %}">Volver</a>
+        <br>
+        <div id="idMensajes">
+            {% if mensaje %}
+            {{ mensaje }}
+            {% endif %}
+        </div>
+
+    </div>
+    {% endif %}
+
+
+</body>
+</html>

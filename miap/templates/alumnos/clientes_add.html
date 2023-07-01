@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Primera Página </title>
+</head>
+<body>
+
+    <div style="text_align: center">
+        <h2>Formulario CRUD para Clientes</h2><br>
+        <form action="ClientesAdd" method="POST">
+            {% csrf_token %}
+
+            <pre>Nombre:             <input type="text" name="nombre"></pre>
+            <pre>Apellido P.:        <input type="text" name="paterno"></pre>
+            <pre>Apellido M.:        <input type="text" name="materno"></pre>
+            <pre>Telefono:           <input type="number" name="telefono"></pre>
+            <pre>Correo:             <input type="correo" name="correo"></pre>
+            <pre>Region:             <input type="region" name="region"></pre>            
+            <pre>Dirección:          <input type="text" name="direccion"></pre>
+            <pre>Comuna:             <input type="comuna" name="comuna"></pre>            
+
+            <input type="submit" name="opcion" value="Agregar">
+        </form> <br><br>
+        <a href="{% url 'index' %}">Volver</a>
+        <br>
+        <div id="idMensajes">
+            {% if mensaje %}
+            {{ mensaje }}
+            {% endif %}
+        </div>
+
+    </div>
+
+
+</body>
+</html>
