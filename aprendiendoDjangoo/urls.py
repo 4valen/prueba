@@ -24,7 +24,10 @@ urlpatterns = [
     path('hola-mundo/',views.holaMundo, name="hola_mundo"),
     path('' , views.index, name="inicio"),
     path('inicio/' , views.inicio, name="inicio"),
-    path('contacto/' , views.contacto, name="contacto")
+    path('contacto/' , views.contacto, name="contacto"),
+    path('nosotros/' , views.nosotros, name="nosotros"),
+    path('donaciones/' , views.donaciones, name="donaciones"),
+    path('tienda/' , views.tienda, name="tienda")
     
 ]
 
