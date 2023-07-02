@@ -1,0 +1,23 @@
+
+{% extends 'layout.html'%}
+
+{% block title %} {{title}} {% endblock %}
+
+
+
+{% block content %}
+<h1>registro</h1>
+
+<form method="post" action="">
+{% csrf_token %}
+{{register_form.as_p}}
+
+<input type="submit" value="registrarse"/>
+
+</form>
+
+
+
+
+
+{% endblock %}

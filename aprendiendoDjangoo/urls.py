@@ -21,13 +21,17 @@ from miap import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('hola-mundo/',views.holaMundo, name="hola_mundo"),
+   
     path('' , views.index, name="inicio"),
     path('inicio/' , views.inicio, name="inicio"),
     path('contacto/' , views.contacto, name="contacto"),
     path('nosotros/' , views.nosotros, name="nosotros"),
     path('donaciones/' , views.donaciones, name="donaciones"),
-    path('tienda/' , views.tienda, name="tienda")
-    
+    path('tienda/' , views.tienda, name="donaciones"),   
+    path('registro/',views.register_page, name="registro"),
+    path('login/',views.login, name="login"),
+    path('region/', views.region, name="region"),
+    path('clientesadd/',views.clientesadd, name="clientes")
 ]
+
 

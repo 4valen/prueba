@@ -1,27 +1,10 @@
+{% extends 'layoud.html' %}
 
 
- <h1>sitio web con django</h1>
- 
- <ul>
-     <li><a href="/inicio">Inicio</a>
-     <li>
-     <li> <a href="/contacto"> contacto</a>
-     <li>
-     <li> <a href="/nosotros"> nosotros</a>
-     <li>
-     <li> <a href="/donaciones"> donaciones</a>
-     <li>
-      <li> <a href="/tienda"> tienda</a>
-     <li>
- 
-     <li> <a href="/hola-mundo">hola mUndo</a>
-     <li>
- </ul>
- <hr>
+{% block content %}
 
-
-
-
+<link rel="hoja de estilo" href=" {% static 'css/bootstrap/bootstrap.min.css' %} " />
+<link rel="stylesheet" href="static">
  <section class="home">
      <div class="text"> <div id="carrusel-heroe" class="carousel slide carousel-fade" data-bs-ride="carousel">
          <!--INDICADORES-->
@@ -126,4 +109,4 @@
      
          <!-- /fin -->
      </div>
-  
+     {% endblock %}

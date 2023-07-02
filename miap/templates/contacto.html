@@ -1,32 +1,14 @@
-layout="""
-<h1>sitio web con django</h1>
+{% extends 'layout.html' %}
 
-<ul>
-    <li><a href="/inicio">Inicio</a>
-    <li>
-    <li> <a href="/contacto"> contacto</a>
-    <li>
-    <li> <a href="/nosotros"> nosotros</a>
-    <li>
-    <li> <a href="/donaciones"> donaciones</a>
-    <li>
-     <li> <a href="/tienda"> tienda</a>
-    <li>
+{% block content %}
 
-    <li> <a href="/hola-mundo">hola mUndo</a>
-    <li>
-</ul>
-<hr>
-"""
-
-<h1> contacto </h1>
-    <p> aqui presentamos 3<p>
-    <form act ion="/procesar_formulario" method="post">
-    <label for="nombre">Nombres    :</label>
-    <input type="text" id="nombre" name="nombre"  placeholder="ingrese nombre" required><br>
-        <label for="apellido">Apellidos    :</label>
-    <input type="text" id="apellido" name="apellido"  placeholder="ingrese apellidos" required><br>
-
+<h1>contacto</h1>
+<p>Aquí presentamos 3</p>
+<form action="/procesar_formulario" method="post">
+    <label for="nombre">Nombres:</label>
+    <input type="text" id="nombre" name="nombre" placeholder="Ingrese nombre" required><br>
+    <label for="apellido">Apellidos:</label>
+    <input type="text" id="apellido" name="apellido" placeholder="Ingrese apellidos" required><br>
     <label for="telefono">Telefono    :</label>
     <input type="text" id="telefono" name="telefono"  placeholder="ingrese telefono" required><br>
     
@@ -42,6 +24,8 @@ layout="""
 <label for="comuna">Comuna    :</label>
 <input type="text" id="comuna" name="comuna"  placeholder="comuna" required><br>
     
-    <input type="button" value="Enviar"><br>
-  </form>
+<input type="button" value="Enviar"><br>
+</form>
+
+{% endblock %}
     
